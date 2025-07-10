@@ -18,7 +18,7 @@ const product = ref(null)
 const cart = useCartStore()
 
 onMounted(async () => {
-  const res = await axios.get(`http://localhost:3001/products/${route.params.id}`)
+  const res = await axios.get(`https://backend-uasprak.vercel.app/products/${route.params.id}`)
   product.value = res.data
 })
 </script>

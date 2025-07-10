@@ -46,7 +46,7 @@ const form = ref({
 })
 
 const getProducts = async () => {
-  const res = await axios.get('http://localhost:3001/products')
+  const res = await axios.get('https://backend-uasprak.vercel.app/products')
   products.value = res.data
 }
 
@@ -59,13 +59,13 @@ const addProduct = async () => {
     : 0
   const newProduct = { ...form.value, id: maxId + 1 }
 
-  await axios.post('http://localhost:3001/products', newProduct)
+  await axios.post('https://backend-uasprak.vercel.app/products', newProduct)
   resetForm()
   getProducts()
 }
 
 const deleteProduct = async (id) => {
-  await axios.delete(`http://localhost:3001/products/${id}`)
+  await axios.delete(`https://backend-uasprak.vercel.app/products/${id}`)
   getProducts()
 }
 
@@ -75,7 +75,7 @@ const editProduct = (product) => {
 }
 
 const updateProduct = async () => {
-  await axios.put(`http://localhost:3001/products/${form.value.id}`, {
+  await axios.put(`https://backend-uasprak.vercel.app/products/${form.value.id}`, {
     ...form.value,
     description: form.value.description,
     price: form.value.price

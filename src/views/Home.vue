@@ -26,7 +26,7 @@ import axios from 'axios'
 const latestProducts = ref([])
 
 const getLatestProducts = async () => {
-  const res = await axios.get('http://localhost:3001/products?_sort=id&_order=desc&_limit=4')
+  const res = await axios.get('https://backend-uasprak.vercel.app/products?_sort=id&_order=desc&_limit=4')
   latestProducts.value = res.data
 }
 

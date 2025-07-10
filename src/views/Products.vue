@@ -60,7 +60,7 @@ const addToCart = (product) => {
 
 onMounted(async () => {
   try {
-    const res = await axios.get('http://localhost:3001/products')
+    const res = await axios.get('https://backend-uasprak.vercel.app/products')
     products.value = res.data
   } catch (err) {
     console.error('Gagal mengambil produk:', err)
