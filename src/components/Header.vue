@@ -5,6 +5,7 @@
       <RouterLink to="/" exact-active-class="active">Home</RouterLink> |
       <RouterLink to="/products" exact-active-class="active">Produk</RouterLink> |
       <RouterLink to="/cart" exact-active-class="active">Keranjang</RouterLink>
+      <RouterLink to="/login" exact-active-class="active">login</RouterLink>
     </nav>
   </header>
 </template>
